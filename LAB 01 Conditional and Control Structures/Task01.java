@@ -17,27 +17,17 @@ public class Task01{
         Scanner input = new Scanner(System.in);
 
         int units;
-        System.out.print("Enters the number of units consumed: ");
+        System.out.print("Enter the number of units consumed: ");
         units = input.nextInt();
 
-        if(units <= 50 && units >= 0){
-            System.out.print("Price: " + units*10);
-        }
-        else if(units > 50 && units <= 100){
-            System.out.print("Price: " + units*15);
-        }
-        else if(units > 100 && units <= 200){
-            System.out.print("Price: " + units*20);
-        }
-        else if(units > 200 && units <= 300){
-            System.out.print("Price: " + units*25);
-        }
-        else if(units > 300){
-            System.out.print("Price: " + units*30);
-        }
-        else{
-            System.out.print("Invalid Input");
-        }
+        // calculate price and display
+        if(units <= 50 && units >= 0) System.out.print("Price: " + units*10);
+        else if(units > 50 && units <= 100) System.out.print("Price: " + units*15);
+        else if(units > 100 && units <= 200) System.out.print("Price: " + units*20);
+        else if(units > 200 && units <= 300) System.out.print("Price: " + units*25);
+        else if(units > 300) System.out.print("Price: " + units*30);
+        else System.out.print("Invalid Input");
+
         input.close();
     }
 }
